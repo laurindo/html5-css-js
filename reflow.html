@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Exemplo de reflow</title>
+
+		<meta name="description" content="Apresentação sobre HTML, CSS e JS">
+		<meta name="author" content="Daniel Laurindo">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/reflow.css">
+	</head>
+
+	<body>
+	
+		<div>
+			<h2>Exemplo de reflow</h2>
+			<div class="displayNone">
+				<ul>
+					<li><span>(1) - display: none;</span></li>
+					<li><span>(2) - display: none;</span></li>
+					<li><span>(3) - display: none;</span></li>
+					<li><span>(4) - display: none;</span></li>
+				</ul>
+				<button class="btnDisp">Remover da árvore DOM</button>
+			</div>
+
+			<div class="visibility">
+				<ul>
+					<li><span>(1) - visibility: hidden</span></li>
+					<li><span>(2) - visibility: hidden</span></li>
+					<li><span>(3) - visibility: hidden</span></li>
+					<li><span>(4) - visibility: hidden</span></li>
+				</ul>
+			</div>
+		</div>
+		
+
+		<script>
+
+			// display: none
+			var listNone = document.querySelectorAll(".displayNone ul li");
+			console.log(listNone);
+
+			for ( var i = 0; i < listNone.length; i++ ) {
+				listNone[i].addEventListener("click", function (e) {
+					var parent = e.target.parentElement;
+					parent.style.display = "none";
+				});
+			}
+			var btnDisp = document.querySelector(".btnDisp");
+			btnDisp.addEventListener("click", function (e) {
+				document.querySelector(".displayNone ul").remove();
+			});
+
+			// visibility: hidden
+			var listVisible = document.querySelectorAll(".visibility ul li");
+			console.log(listNone);
+
+			for ( var i = 0; i < listVisible.length; i++ ) {
+				listVisible[i].addEventListener("click", function (e) {
+					var parent = e.target.parentElement;
+					parent.style.visibility = "hidden";
+				});
+			}			
+
+		</script>
+
+	</body>
+</html>
+
