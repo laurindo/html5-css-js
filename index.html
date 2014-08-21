@@ -71,7 +71,7 @@
 						<a class="image" 
 							href="http://www.html5rocks.com/pt/tutorials/internals/howbrowserswork/#The_browsers_we_will_talk_about" 
 							target="_blank">
-							<img width="829" height="338" src="img/code-html.png" alt="Code HTML">
+							<img width="847" height="512" src="img/code-html2.png" alt="Code HTML">
 						</a>
 					</section>
 
@@ -129,16 +129,14 @@
 					</section>
 
 					<section>
-						<p style="text-align: left; padding-bottom: 10px;">Dependendo da sua aplicação, pode ser que não exista tanta diferença, principalmente se for desktop, mas imagine um dispositivo menos robusto, um smartphone em uma conexão 3G. Poderíamos perder em:</p>
-						<ul>
-							<li>Tempo de renderização;</li>
-							<li>Em transições de tela e conteúdo;</li>
-							<li>Alto processamento, gerando maior consumo de bateria;</li>
-						</ul>
+						<p><span class="green">Yahoo</span> - 400 milissegundos de desaceleração resultou em uma queda de 5-9% no tráfego de página inteira.</p>
+						<p><span class="green">Google</span> - Um atraso de 400 milissegundos causou uma queda de 0,59% em pesquisas / usuário.</p>
+						<p><span class="green">Bing</span> - Uma página que foi 2 segundos mais lento resultou em uma queda de 4,3% na receita / usuário.</p>
+						<p style="text-align: left; padding-bottom: 10px;">Não importa qual seja o objetivo de sua aplicação, nós desenvolvedores devemos sempre nos preocupar com otimização, código limpo e bem escrito porque isso envolve uma experiência positiva do usuário.</p>
 					</section>
 
 					<section>
-						<p style="text-align: left; padding-bottom: 10px;">Alguns exemplos</p>
+						<p style="text-align: left; padding-bottom: 10px;">Mais exemplos de reflows</p>
 						<ul>
 							<li>Adicionar, remover ou atualizar o DOM;</li>
 							<li>Esconder nós do DOM usando display:none;</li>
@@ -165,20 +163,59 @@
 
 					<section>
 						<p>Quaisquer arquivos javascript quando carregados utilizando a tag <span class="green">script</span> são bloqueantes por natureza.
-						Enquanto é feito o download e execução do script todo o processo de parser do DOM é bloqueado, impedindo a renderização do resto da página. E olha que isso se aplica a cada tag de script contida na página !!!!</p>
+						Enquanto é feito o download e execução do script, todo processo de parser do DOM é bloqueado, impedindo a renderização do resto da página. E olha que isso irá ser aplicado a cada tag de script contida na página !!!!</p>
 					</section>
 
 					<section>
 						<h3>Solução</h3>
 						<img width="600" height="517" src="img/no-js-head.png" alt="No scripts in head">
+					</section>
+
+					<section>
+						<h3>Seu projeto dá suporte à apenas browsers modernos?</h3>
+						<p>então experimente o <i>async</i> e o <i>defer</i></p>
 						<a href="http://zenorocha.com/html5-async-scripts/" target="_blank">http://zenorocha.com/html5-async-scripts/</a>
+					</section>
+
+					<section>
+						<h3>Evite código inline</h3>
+						<p>1 ) Inline</p>
+						<img width="883" height="461" src="img/css-inline.png" alt="Code inline">
+					</section>
+
+					<section>
+						<h3>Evite código incorporado</h3>
+						<p>2 ) Incorporado</p>
+						<img width="523" height="533" src="img/css-incorporado.png" alt="Code incorporate">
+					</section>
+
+					<section>
+						<h3>Mas por que?</h3>
+						<p>Apesar de reduzirem o número de requisições, aumentam o tamanho do documento HTML. Elas podem ser interessante quando você tem arquivos pequenos e o custo de uma requisição é maior. Nesse caso, faça testes para avaliar se há realmente ganho. Avalie também o objetivo da página e sua audiência, se o esperado é que usuários visitem essa página somente uma única vez, como por exemplo uma campanha temporária onde não se espera futuras visitas à mesma, utilizar inline/incorporado ajudará na redução do número de requisições.</p>
+					</section>
+
+					<section>
+						<h3>Use códigos externos :)</h3>
+						<img width="834" height="414" src="img/code-extern.png" alt="Code extern">
+					</section>
+
+					<section>
+						<h3>Vantagens</h3>
+						<ul>
+							<li>Melhora a organização do código;</li>
+							<li>Possibilita ser armazenados em cache;</li>
+							<li>Além de fornecer uma fácil manutenção;</li>
+						</ul>
 					</section>
 
 					<section>
 						<p>Links</p>
 						<a href=" http://tableless.com.br/entendendo-os-reflows-2/" target="_blank">* reflows</a><br>
 						<a href="http://www.stevesouders.com/blog/2010/12/06/evolution-of-script-loading/" target="_blank">* scripts in head</a><br>
-						<a href="http://zenorocha.com/html5-async-scripts/" target="_blank">* async scripts</a>
+						<a href="http://zenorocha.com/html5-async-scripts/" target="_blank">* async scripts</a><br>
+						<a href="https://github.com/zenorocha/browser-diet/wiki/Impact-of-performance" target="_blank">* Impacto de performance</a><br>
+						<a href="https://github.com/zenorocha/browser-diet/wiki/Tools#avoid-inlineembedded-code" target="_blank">* Ferramentas úteis</a><br> 
+						<a href="https://github.com/zenorocha/browser-diet/wiki/References#avoid-inlineembedded-code" target="_blank">* Referências</a><br>
 					</section>
 
 				</section>
