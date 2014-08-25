@@ -182,6 +182,10 @@
 					</section>
 
 					<section>
+						<img src="img/infografico.png" alt="Infografico revista istoé">
+					</section>
+
+					<section>
 						<p><span class="green">Yahoo</span> - 400 milissegundos de desaceleração resultou em uma queda de 5-9% no tráfego de página inteira.</p>
 						<p><span class="green">Google</span> - Um atraso de 400 milissegundos causou uma queda de 0,59% em pesquisas / usuário.</p>
 						<p><span class="green">Bing</span> - Uma página que foi 2 segundos mais lento resultou em uma queda de 4,3% na receita / usuário.</p>
@@ -230,6 +234,7 @@
 
 					<section>
 						<p>Links</p>
+						<a href="http://www.uxdesign.blog.br/user-experience/carregamento-na-experiencia-do-usuario/" target="_blank">* Carregamento de páginas(UX)</a><br>
 						<a href=" http://tableless.com.br/entendendo-os-reflows-2/" target="_blank">* reflows</a><br>
 						<a href="http://www.stevesouders.com/blog/2010/12/06/evolution-of-script-loading/" target="_blank">* scripts in head</a><br>
 						<a href="http://zenorocha.com/html5-async-scripts/" target="_blank">* async scripts</a><br>
@@ -338,6 +343,41 @@
 
 				<section>
 					<section>
+						<h3>Entendendo nossa arquitetura</h3>	
+					</section>
+
+					<section>
+						<h3>Começando com Gulp.js</h3>
+						<img src="img/gulp.png" alt="Gulp.js">
+					</section>
+
+					<section>
+						Gulp é uma ferramenta de automação de tarefas feita em JavaScript e rodando em cima do Node.js
+					</section>
+
+					<section>
+						Dentre as tarefas do Gulp.js, você vai ver:
+						<ul>
+							<li>Minificação de arquivos JS(uglify)</li>
+							<li>Minificação de arquivos CSS(cssmin)</li>
+							<li>Less</li>
+							<li>JSHint</li>
+							<li>Verificaor de modificações(watch)</li>
+							<li>Teste unitário(qunit)</li>
+							<li>Build</li>
+							<li>Deploy</li>
+						</ul>
+					</section>
+
+					<section>
+						Gulp ou Grunt?
+						Simples, use Gulp porque é muito mais rápido, pois o mesmo faz uso das streams do Nodejs para escrever arquivos diretamente em disco, sem uso de intermediários. O Gulp também abstrai detalhes mais técnicos em relação ao Grunt.
+					</section>
+					
+				</section>
+
+				<section>
+					<section>
 						<h2>Nosso layout(DESKTOP) feito em cima de uma grid</h2>
 						<img src="img/layout-desktop.png" alt="Layout desktop">
 					</section>
@@ -346,17 +386,90 @@
 						<h2>Nosso layout(MOBILE) feito em cima de uma grid</h2>
 						<img src="img/layout-mobile.png" alt="Layout mobile">
 					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Less e Sass</h2>
+						<p>É uma linguagem baseada em CSS que gera CSS no final. O pessoal chama de pré-processador, porque no fim o browser só entende CSS mesmo.</p>	
+					</section>
 
 					<section>
-						<h2>Criando a estrutura HTML</h2>
-						<p>Vamos utilizar o conceito de <span class="green">mobile first</span></p>
+						<h2>Exemplo - CSS</h2>
+						<img src="img/code-css.png" alt="Código CSS">
+					</section>
+
+					<section>
+						<h2>Exemplo - Less</h2>
+						<img src="img/code-less.png" alt="Código CSS">
+					</section>
+
+					<section>
+						<h2>Exemplo - Sass</h2>
+						<img src="img/code-sass.png" alt="Código SASS">
+					</section>
+
+					<section>
+						<a href="https://gist.github.com/chriseppstein/674726" target="_blank">Comparação mais detalhada entre Less vs. Sass</a>
 					</section>
 				</section>
 
 				<section>
-					<h2>CSS, Pré-processadores(Less, SASS)</h2>
-					<img src="img/layout-desktop.png" alt="Layout desktop">
+					<section>
+						<h2>Mais performance</h2>	
+					</section>
+
+					<section>
+						Minificar arquivos CSS
+					</section>
+
+					<section>
+						Combine vários arquivos CSS em um só
+						https://github.com/zenorocha/browser-diet/wiki/Tools#combining-multiple-css-files
+					</section>
+
+					<section>
+						Prefire link a @import
+						https://github.com/zenorocha/browser-diet/wiki/References#prefer--over-import
+					</section>
 				</section>
+
+				<section>
+					<section>
+						<h2>Layout responsive, liquid e fixed</h2>
+					</section>
+
+					<section>
+						Características e diferenças
+					</section>
+
+					<section>
+						Media queries e seus limite com IE
+					</section>
+					
+				</section>
+
+				<section>
+					<section>
+						<h3>Javascript, jquery e um pouco mais de performance</h3>	
+					</section>
+
+					http://jsperf.com/browse
+					
+				</section>
+
+				<section>
+					<section>
+						<h3>Imagem e um pouco mais de performance</h3>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Ferramentas de diagnóstico</h3>
+					</section>
+				</section>
+				
 
 				<section>
 					<h1>THE END</h1>
